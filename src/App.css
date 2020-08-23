@@ -3,3 +3,15 @@
   height: 100%;
   background-color: #282c34;
 }
+
+.description {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+
+  background-color: #546e82;
+  color: #dbd2b4;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}

@@ -1,9 +1,15 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import ReactWordcloud from "react-wordcloud";
+import ReactWordcloud, { Options, Optional } from "react-wordcloud";
 
 import { setDescription } from "./actions/actions";
 import { words } from "./words";
+
+const options: Optional<Options> = {
+  rotations: 0,
+  fontSizes: [30, 200],
+  padding: 8,
+};
 
 export function WordCloud() {
   const dispatch = useDispatch();
@@ -16,7 +22,7 @@ export function WordCloud() {
         onWordMouseOver: (word) =>
           dispatch(setDescription(word.description || null)),
       }}
-      options={{ rotations: 0 }}
+      options={options}
       minSize={[300, 300]}
     />
   );

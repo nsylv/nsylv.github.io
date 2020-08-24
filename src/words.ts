@@ -1,7 +1,7 @@
 export const words = [
   {
     text: "Nikki",
-    value: 901,
+    value: 9001,
     description: "👋 Hi, I'm Nikki!",
   },
   {

@@ -12,13 +12,12 @@ export function WordCloud() {
     <ReactWordcloud
       words={words}
       callbacks={{
-        getWordTooltip: () => null,
+        getWordTooltip: (word) => word.description || word.text,
         onWordMouseOver: (word) =>
           dispatch(setDescription(word.description || null)),
       }}
       options={{ rotations: 0 }}
       minSize={[300, 300]}
-      // size={[600, 800]}
     />
   );
 }
